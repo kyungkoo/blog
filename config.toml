@@ -1,0 +1,4 @@
+baseURL = "https://kyungkoo.github.io/"
+languageCode = "en-us"
+title = "kyungkoo blog"
+theme = "anubis"
