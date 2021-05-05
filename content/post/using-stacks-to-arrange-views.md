@@ -1,13 +1,18 @@
 ---
-title: "[iOS App Dev Tutorials] Using Stacks to Arrange Views"
+title: "Using Stacks to Arrange Views"
 date: 2021-05-06T00:56:26+09:00
 draft: false
+tags:
+  - iOS App Dev Tutorials
 ---
+
+`Using Stacks to Arrange Views` 에서는 `MeetingView` 화면을 를 만들어 본다.
+<!--more--> 
 
 ## [ProgressView](https://developer.apple.com/documentation/swiftui/progressview) 추가하기
 [ProgressView](https://developer.apple.com/documentation/swiftui/progressview) 를 추가하는 것 자체는 큰 어려움이 없지만, Xcode12.5 기준으로 `ProgressView(value:total)` 선언 시, `value` 값이 `Int` 이면 canvas 에서 아래와 같은 에러가 발생한다.
 
-```
+```sh
 initializer 'init(value:total:)' requires that 'Int' conform to 'BinaryFloatingPoint'
 
 ----------------------------------------

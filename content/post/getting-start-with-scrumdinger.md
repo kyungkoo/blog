@@ -1,10 +1,13 @@
 ---
-title: "[iOS App Dev Tutorials] Getting Start With Scrumdinger"
+title: "iOS App Dev Tutorials 시작하기"
 date: 2021-05-06T00:33:39+09:00
 draft: false
+tags:
+  - iOS App Dev Tutorials
 ---
 
 [iOS App Dev Tutorials](https://developer.apple.com/tutorials/app-dev-training)는 `Scrumdinger` 라는 앱을 만들면서 `SwiftUI` 를 배울 수 있는 학습 가이드다. 
+<!--more-->
 
 ## SwiftUI 살펴보기
 `SwiftUI` 는 다음과 같은 특징을 갖는다.
