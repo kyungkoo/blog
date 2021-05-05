@@ -1,5 +1,5 @@
 ---
-title: "Using Stacks to Arrange Views"
+title: "[iOS App Dev Tutorials] Using Stacks to Arrange Views"
 date: 2021-05-06T00:56:26+09:00
 draft: false
 ---
@@ -27,4 +27,4 @@ SwiftUI.ProgressView:3:12: note: where 'V' = 'Int'
 
 재미있는점은 이 에러는 canvas 에서만 발생하고, 실제 빌드 및 시뮬레이터 에서는 정상적으로 동작한다는 점이다.
 
-위 문제를 해결하기 위해서는 `value` 에 `5.0` 와 같이 `Float` 타입을 입력해주어야 한다.
+위 문제를 해결하기 위해 `value` 에는 `5.0` 와 같이 `Float` 타입으로 값을 입력해 주도록 하자.
