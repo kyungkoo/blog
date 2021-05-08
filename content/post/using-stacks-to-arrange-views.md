@@ -110,3 +110,17 @@ public struct Button<Label> : View where Label : View {
 ```
 
 위 선언에서 보다시피 `Label` 은 결국 [`View`](https://developer.apple.com/documentation/swiftui/view) 구현체이기 때문에 SwiftUI 에서 사용하는 모든 컴포넌트를 `Button` 에 추가할 수 있다.
+
+
+## Supplement Accessibility Data
+예제를 하면서 가장 놀라웠던 내용이었다. 튜토리얼 에서 Accessibility 를 이토록 지속적이고 실무에 사용할 수 있을 정도로 다루는걸 본 적이 없었기 때문이다. 
+한편으로는 그만큼 애플이 Accessibility 지원에 많은 고민을 하고 있다는 것을 알 수 있었고,
+예제를 통해 SwiftUI 에서 Accessibility 를 지원하는 일이 결코 어려운일이 아니라는 것을 느낄 수 있었다. 
+
+SwiftUI 는 기본적으로 Accessibility 를 **잘** 지원하기 때문에 별도 처리를 할 필요가 없지만, 사용자에게 정확하고 필요한 정보만을 제공하도록 **일부** 설정을 해 주어야 한다.
+한 예로, custom view 를 만드는 경우, 뷰가 갖고 있는 모든 내용을 알려주기 보다는 사용자에게 필요한 정보만 요약, 정리해서 알려주는것이 UX 적으로 훨씬 좋은 경험을 제공할 것이다.
+
+첫 번째로 나오는 내용이 바로 이것이다. 
+[`accessibilityElement(children: .ignore)`](https://developer.apple.com/documentation/swiftui/text/accessibilityelement(children:)) 를 통해 `HStack` 내부 컨포넌트가 설명되는것을 피하고, [`accessibilityLabel(Text("Time remaining"))`](https://developer.apple.com/documentation/swiftui/text/accessibilitylabel(_:)-7wzu8) 와 [`accessibilityValue(Text("10 minutes"))`](https://developer.apple.com/documentation/swiftui/view/accessibilityvalue(_:)-z9mo)로 컴포넌트가 나타내고자 하는 내용을 정의해 사용자에게 필요한 정보를 효과적으로 전달 할 수 있도록 변경했다.
+
+[View Modifiers](https://developer.apple.com/documentation/swiftui/text-view-modifiers) 에서 SwiftUI 에서 사용 가능한 Accessibility 관련 기능을 자세히 확인 할 수 있으니 참고하자.
