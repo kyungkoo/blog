@@ -55,7 +55,7 @@ SwiftUI.ProgressView:3:12: note: where 'V' = 'Int'
 위 문제를 해결하기 위해 `value` 에는 `5.0` 와 같이 `Float` 타입으로 값을 입력해 주도록 하자.
 
 
-# 컨포넌트 살펴보기
+# 컴포넌트 살펴보기
 프로젝트 초반이다보니 여러 컴포넌트를 사용하게 된다.
 각 컴포넌트에 대해 간략하게 살펴보자.
 
@@ -121,6 +121,6 @@ SwiftUI 는 기본적으로 Accessibility 를 **잘** 지원하기 때문에 별
 한 예로, custom view 를 만드는 경우, 뷰가 갖고 있는 모든 내용을 알려주기 보다는 사용자에게 필요한 정보만 요약, 정리해서 알려주는것이 UX 적으로 훨씬 좋은 경험을 제공할 것이다.
 
 첫 번째로 나오는 내용이 바로 이것이다. 
-[`accessibilityElement(children: .ignore)`](https://developer.apple.com/documentation/swiftui/text/accessibilityelement(children:)) 를 통해 `HStack` 내부 컨포넌트가 설명되는것을 피하고, [`accessibilityLabel(Text("Time remaining"))`](https://developer.apple.com/documentation/swiftui/text/accessibilitylabel(_:)-7wzu8) 와 [`accessibilityValue(Text("10 minutes"))`](https://developer.apple.com/documentation/swiftui/view/accessibilityvalue(_:)-z9mo)로 컴포넌트가 나타내고자 하는 내용을 정의해 사용자에게 필요한 정보를 효과적으로 전달 할 수 있도록 변경했다.
+[`accessibilityElement(children: .ignore)`](https://developer.apple.com/documentation/swiftui/text/accessibilityelement(children:)) 를 통해 `HStack` 내부 컴포넌트가 설명되는것을 피하고, [`accessibilityLabel(Text("Time remaining"))`](https://developer.apple.com/documentation/swiftui/text/accessibilitylabel(_:)-7wzu8) 와 [`accessibilityValue(Text("10 minutes"))`](https://developer.apple.com/documentation/swiftui/view/accessibilityvalue(_:)-z9mo)로 컴포넌트가 나타내고자 하는 내용을 정의해 사용자에게 필요한 정보를 효과적으로 전달 할 수 있도록 변경했다.
 
 [View Modifiers](https://developer.apple.com/documentation/swiftui/text-view-modifiers) 에서 SwiftUI 에서 사용 가능한 Accessibility 관련 기능을 자세히 확인 할 수 있으니 참고하자.
