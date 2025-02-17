@@ -2,7 +2,6 @@ baseURL = "https://kyungkoo.github.io/"
 languageCode = "en-us"
 title = "devlog"
 theme = "anubis"
-paginate = 3
 
 [author]
   name = "kyungkoo"
@@ -28,3 +27,6 @@ paginate = 3
   name = "Tags"
   url = "/tags/"
   weight = 1
+
+[pagination]
+  pageSize = 10
