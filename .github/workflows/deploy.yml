@@ -1,0 +1,30 @@
+name: Deploy Hugo Site
+
+on:
+  push:
+    branches:
+      - main  # main 브랜치에 push하면 실행
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # 테마 포함
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+
+      - name: Build Site
+        run: hugo --minify  # Hugo 사이트 빌드
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public  # Hugo 빌드 결과물 배포
